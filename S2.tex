@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+%\usepackage{cyrillic}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\Pref{{\rm Pref}}
+\def\shuff{{\rm shuff}}
+
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2013\\
+Problem Set 2\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Tuesday, January 15 2013.}
+
+\smallskip
+
+\noindent{\it Due Tuesday, January 22 2013, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.  
+
+\begin{enumerate}
+
+\item{} [10 marks]  
+Call a language $L$ {\sl commutative} if for all $x, y \in L$
+we have $xy = yx$.  Show that $L$ is commutative if and only if there exists
+a word $w$ such that $L \subseteq w^*$.
+
+\medskip
+
+\item{} [10 marks]  
+Suppose $A = \lbrace x \rbrace$ is a language consisting
+of one nonempty word and $B = \lbrace y, z \rbrace$ is a language 
+consisting of two (distinct) words, such that $AB = BA$.  Show that
+$x, y, z$ are all powers of the same word.
+
+\medskip
+
+\item{} [10 marks]  
+We say that $x$ is an {\it abelian square} if it can be written
+in the form $y y'$, where $|y| = |y'|$ and $y'$ is a permutation
+of $y$.  An example in English is {\tt reappear}, since
+{\tt pear} is a permutation of {\tt reap}.
+
+Let $x$ be a word over the alphabet $\lbrace 0,1 \rbrace$.
+Show that $x$ is an abelian square
+if and only if there exists a word $y$ such that
+$x \in \shuff(y, y^R)$.  Here $\shuff$ means (not necessarily
+perfect) shuffle, described on page 57 of the text.
+
+
+
+\end{enumerate}
+
+\end{document}

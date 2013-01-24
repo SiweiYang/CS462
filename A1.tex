@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+%\usepackage{cyrillic}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\Pref{{\rm Pref}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2013\\
+Problem Set 1\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Tuesday, January 8 2013.}
+
+\smallskip
+
+\noindent{\it Due Tuesday, January 15 2013, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.  In all problems the underlying
+alphabet $\Sigma$ is assumed to be finite.
+
+\begin{enumerate}
+
+\item{} [10 marks]  
+Show that for every infinite string $\bf w$ there must be some letter
+$a$ and some finite string $x$ such that $axa$ appears infinitely often as a
+subword of $\bf w$.
+
+\medskip
+
+\item{} [10 marks]  
+Let $u, v$ be strings of the same length, and let
+$d(u,v)$ be the number of positions on which $u$ and $v$ differ; that is,
+the number of indices $i$ for which $u[i] \not= v[i]$.    
+For example, $d({\tt seven},{\tt three}) = 4$.  Show that for all
+strings $x,y$ we have $d(xy, yx) \not= 1$.  Note that $x$ and $y$ need
+not be of the same length here.
+
+{\it Hint:}  There is a very simple solution that can be hard to find,
+and a lengthy solution that is easy to find.
+
+\medskip
+
+\item{} [10 marks]  An infinite string ${\bf x} = a_0 a_1 a_2 \cdots$
+is said to be {\sl recurrent} if every
+finite subword that occurs in $\bf x$ occurs infinitely often in $\bf x$.
+An infinite string is {\sl mirror invariant} if for every finite subword $w$ of
+$\bf x$, the reversed string $w^R$ is also a subword of $\bf x$.
+
+\begin{itemize}
+
+\item[(a)]  Show that an infinite string $\bf x$ is recurrent if and only
+if every
+finite subword that occurs in $\bf x$ occurs at least twice.
+
+\item[(b)]  Show that if an infinite string is mirror invariant,
+then it is recurrent.
+
+\end{itemize}
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+\usepackage{cyrillic}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\Pref{{\rm Pref}}
+\def\shuff{{\rm shuff}}
+
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2013\\
+Problem Set 3\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Tuesday, January 22 2013.}
+
+\smallskip
+
+\noindent{\it Due Tuesday, January 29 2013, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.  
+
+\begin{enumerate}
+
+\item{} [10 marks]  
+Must every primitive word of length $> 1$ have at least two 
+unbordered conjugates?  Prove or disprove.
+
+
+\medskip
+
+\item{} [10 marks]  
+Consider the equation in words $x \sha y = z^2$, where $\sha$ is the
+perfect shuffle.  Describe
+all solutions to this equation.  Hint:  there are separate cases
+depending on whether $|x|, |y|$ are both even or both odd.
+
+\medskip
+
+(By ``describe all solutions'' we mean come up with a characterization
+of the solutions that is somewhat analogous to the descriptions in
+Theorems 2.3.2 and 2.3.3 of the course text, giving necessary and
+sufficient conditions for $x, y, z$.)
+
+
+\medskip
+
+\item{} [10 marks]  
+Call a word $w$ {\it uneven} if every nonempty subword
+has the property that at least one letter appears an odd number of
+times.  For example, ${\tt abac}$ is uneven.   
+
+\begin{itemize} 
+
+\item[(a)]  [5 marks] Show that if $w$ is an uneven word over an
+alphabet with $k$ letters, then $|w| < 2^k$.
+
+\item[(b)] [5 marks]  Prove that the bound in (a) is sharp, by
+exhibiting an uneven word of length $2^k -1 $ over every alphabet of
+size $k \geq 1$.
+
+\end{itemize}
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
