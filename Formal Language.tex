@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+\title{Accompanied Definitions and Proofs}
+
+\usepackage{fullpage,amssymb,amsmath,amsthm}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+
+subscript start from 0
+
+
+
+\begin{definition} subseq(x, I) :=
+\begin{itemize}
+\item[•]subseq(x, I) := $\epsilon$ $\mid$ I = \{\}
+\item[•]subseq(x, I) := subseq(x, I $\setminus$ i) $x_{i}$ where i = max(I) $\mid$ otherwise
+\end{itemize}
+\end{definition}
+
+
+\begin{definition} shuffle(x, y) := \{ w $\mid$ w $\in$ perm(x y), subseq(w, A) = x, subseq(w, B) = y, A $\cap$ B = \{\}, A $\cup$ B = $Z_{|x|+|y|}$ \}
+\begin{itemize}
+\item[•]shuffle(x) := x
+\item[•]shuffle(x, y) := \{ w $\mid$ w $\in$ perm(x y), subseq(w, A) = x, subseq(w, B) = y, A $\cap$ B = \{\}, A $\cup$ B = $Z_{|x|+|y|}$ \}
+\item[•]shuffle($\cdots$, w) := $\bigcup_{W \in shuffle(\cdots)}$shuffle(W, w)
+\end{itemize}
+\end{definition}
+
+\begin{lemma}
+x $\in$ shuffle($\alpha_{0}^{W_{0}}$, $\cdots$) where $\mid x \mid_{\alpha_{i}}=W_{i}$ and $\bigcup\{ \alpha_{i} \} = \Sigma$
+\end{lemma}
+
+\begin{proof}[Proof by Mathematical Induction]$\vDash$
+
+\subparagraph{Induction}
+Assume x $\in$ shuffle($\alpha_{0}^{W_{0}}$, $\cdots$) where $\mid x \mid_{\alpha_{i}}=W_{i}$ and $\bigcup\{ \alpha_{i} \} = \Sigma$ for $\mid \Sigma \mid < k + 1$
+
+\begin{itemize}
+\item[•]Let x' $\in$ $\Sigma'$ where $\mid \Sigma \mid$ = k + 1, $\mid x' \mid_{\alpha_{i}}=W_{i}$ and $\bigcup\{ \alpha_{i} \} = \Sigma'$
+\item[•]Let $I_{\alpha_{k}}$ = \{$ i \mid i \in Z_{k}, x'_{i} = \alpha_{k} $\}, $I_{\hat{\alpha_{k}}}$ = $Z_{\mid x \mid} \setminus I_{\alpha_{k}}$
+\item[•]Let y = subseq(x, $I_{\hat{\alpha_{k}}}$) $\subseteq$ shuffle($\alpha_{0}^{W_{0}}$, $\cdots$, $\alpha_{k - 1}^{W_{k - 1}}$), y' = subseq(x, $I_{\alpha_{k}}$)
+\item[•]Then y $\in$ shuffle($\alpha_{0}^{W_{0}}$, $\cdots$, $\alpha_{k - 1}^{W_{k - 1}}$)
+\item[•]Since x' $\in$ shuffle(y, y'), x' $\in$ shuffle($\alpha_{0}^{W_{0}}$, $\cdots$)
+\end{itemize}
+
+\subparagraph{Baseline}
+\begin{itemize}
+\item[•]x $\in$ shuffle(x) = shuffle($\alpha_{0}^{W_{0}}$) where $\mid x \mid_{\alpha_{i}}=W_{i}$ and $\bigcup\{ \alpha_{i} \} = \Sigma$ for $\mid \Sigma \mid = 1$
+\item[•]x $\in$ perm($\alpha_{0}^{W_{0}}$ $\alpha_{1}^{W_{1}}$) = shuffle($\alpha_{0}^{W_{0}}$, $\alpha_{1}^{W_{1}}$) where $\mid x \mid_{\alpha_{i}}=W_{i}$ and $\bigcup\{ \alpha_{i} \} = \Sigma$ for $\mid \Sigma \mid = 2$
+\end{itemize}
+
+\subparagraph{Conclusion}
+x $\in$ shuffle($\alpha_{0}^{W_{0}}$, $\cdots$) where $\mid x \mid_{\alpha_{i}}=W_{i}$ and $\bigcup\{ \alpha_{i} \} = \Sigma$
+\end{proof}
+
+\begin{lemma}
+shuffle(A B, C D) $\subseteq$ shuffle(A, C) shuffle(B, D)
+\end{lemma}
+
+
+\end{document}

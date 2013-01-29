@@ -49,6 +49,18 @@ depending on whether $|x|, |y|$ are both even or both odd.
 
 \medskip
 
+$if |x| = |y| = 2 * i then let x = xa xb and y = ya yb where |xa| = |xb| = |ya| = |yb| = i$
+$x \sha y = xa \sha ya xb \sha yb = z z$
+$xa \sha ya = z = xb \sha yb$
+xa = xb and ya = yb
+
+$if |x| = |y| = 2 * i + 1 then let x = xa xc xb and y = ya yc yb where |xa| = |xb| = |ya| = |yb| = i and |xc| = |yc| = 1$
+$x \sha y = xa \sha ya xc yc xb \sha yb = z z$
+xa xc = yc yb and ya = xb
+
+
+\medskip
+
 (By ``describe all solutions'' we mean come up with a characterization
 of the solutions that is somewhat analogous to the descriptions in
 Theorems 2.3.2 and 2.3.3 of the course text, giving necessary and
@@ -70,9 +82,15 @@ alphabet with $k$ letters, then $|w| < 2^k$.
 \item[(b)] [5 marks]  Prove that the bound in (a) is sharp, by
 exhibiting an uneven word of length $2^k -1 $ over every alphabet of
 size $k \geq 1$.
+construction
 
 \end{itemize}
 
+let w be longest uneven word for sigma and |sigma| = k + 1
+let w' be longest uneven word for sigma \ s and |sigma \ s| = k
+
+
+so find repetition
 
 
 
