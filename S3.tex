@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \pagestyle{empty}
 
-\usepackage{fullpage,amssymb,amsmath}
+\usepackage{fullpage,amssymb,amsmath,amsthm}
 \usepackage{cyrillic}
 \def\sub{{\rm sub}}
 \def\pref{{\rm pref}}
@@ -41,6 +41,17 @@ unbordered conjugates?  Prove or disprove.
 
 \medskip
 
+Yes they do.
+\begin{proof}[Proof by Contradiction]$\vDash$
+\begin{itemize}
+\item[•]Let $w \in \sum^{*}$  and  $\alpha \in \sum$ s.t. $\neg \exists v^{i} = w$, $\mid x \mid >0, \mid x \mid_{\alpha} >0$
+\item[•]
+\item[•]shuffle($\cdots$, w) := $\bigcup_{W \in shuffle(\cdots)}$shuffle(W, w)
+\end{itemize}
+\end{proof}
+
+\pagebreak
+
 \item{} [10 marks]  
 Consider the equation in words $x \sha y = z^2$, where $\sha$ is the
 perfect shuffle.  Describe
@@ -49,25 +60,32 @@ depending on whether $|x|, |y|$ are both even or both odd.
 
 \medskip
 
-$if |x| = |y| = 2 * i then let x = xa xb and y = ya yb where |xa| = |xb| = |ya| = |yb| = i$
-$x \sha y = xa \sha ya xb \sha yb = z z$
-$xa \sha ya = z = xb \sha yb$
-xa = xb and ya = yb
-
-$if |x| = |y| = 2 * i + 1 then let x = xa xc xb and y = ya yc yb where |xa| = |xb| = |ya| = |yb| = i and |xc| = |yc| = 1$
-$x \sha y = xa \sha ya xc yc xb \sha yb = z z$
-xa xc = yc yb and ya = xb
-
-
-\medskip
-
 (By ``describe all solutions'' we mean come up with a characterization
 of the solutions that is somewhat analogous to the descriptions in
 Theorems 2.3.2 and 2.3.3 of the course text, giving necessary and
 sufficient conditions for $x, y, z$.)
 
+\medskip
+
+if $|x| = |y| = 2 * i$$\vDash$
+
+\begin{itemize}
+\item[•]Let x = xa xb and y = ya yb where $|xa| = |xb| = |ya| = |yb| = i$
+\item[•]$x \sha y$ = $xa \sha ya$  $xb \sha yb = z z$
+\item[•]$xa \sha ya = z = xb \sha yb$
+\item[•]xa = xb and ya = yb
+\end{itemize}
+
+if $|x| = |y| = 2 * i + 1$$\vDash$
+\begin{itemize}
+\item[•]Let x = xa xc xb and y = ya yc yb where $|xa| = |xb| = |ya| = |yb| = i and |xc| = |yc| = 1$
+\item[•]$x \sha y$ = $xa \sha ya$ xc yc $xb \sha yb$ = z z
+\item[•]xa xc = yc yb and ya = xb
+\end{itemize}
 
 \medskip
+
+\pagebreak
 
 \item{} [10 marks]  
 Call a word $w$ {\it uneven} if every nonempty subword
@@ -82,18 +100,59 @@ alphabet with $k$ letters, then $|w| < 2^k$.
 \item[(b)] [5 marks]  Prove that the bound in (a) is sharp, by
 exhibiting an uneven word of length $2^k -1 $ over every alphabet of
 size $k \geq 1$.
-construction
 
 \end{itemize}
 
-let w be longest uneven word for sigma and |sigma| = k + 1
-let w' be longest uneven word for sigma \ s and |sigma \ s| = k
+For (a)
+\begin{itemize}
 
+\item[•]Given W $\in \sum^{*}$ and $\mid \sum \mid$ = k
+\item[•]Assume $\mid W \mid \ge 2^{k}$
 
-so find repetition
+\item[•]Let prefix(w, j) = w' where w' w'' = w and $\mid w' \mid$ = j
+\item[•]Let $\bigcup_{i \in Z_{\mid \sum \mid}}\{\alpha_{i}\} = \sum$
+\item[•]Let par(w) = v where $v_{i}$ = $\mid w \mid_{\alpha_{i}}$ mod 2
+\item[•]Let V = $\{par(prefix(w, j)) \mid j \in Z_{\mid W \mid+1} \setminus \{0\}\}$
 
+if $\exists$ i where $V_{i}$ = par(prefix(W, j)) = 0 then prefix(W, j) is an even word
 
+otherwise $\exists$ i, j where $m \lneq n$, $V_{i}$ = par(prefix(W, m)) = $V_{j}$ = par(prefix(W, n)) because there $2^{k}-1$ unique non-zero vector in the space and $\mid V \mid = \mid W \mid \ge 2^{k}$
+\item[•]Let prefix(W, m) z = prefix(W, n)
+\item[•]Then par(prefix(W, m)) par(z) = par(prefix(W, n))
+\item[•]Then par(z) = par(prefix(W, n)) - par(prefix(W, m)) = 0
+\item[•]Then z is an even word
 
+In both cases, W end up contains an even word. Thus $\mid W \mid \not\le 2^{k}$.
+
+\end{itemize}
+
+For (b)
+\begin{itemize}
+\item[•]Given $\mid \sum \mid$ = k
+\item[•]Let $\bigcup_{i \in Z_{\mid \sum \mid}}\{\alpha_{i}\} = \sum$
+\item[•]Let $w_{0} = \alpha_{0}$
+\item[•]Let $w_{n+1}$ = $w_{n} \sha \alpha_{n+1}^{\mid w_{n} \mid}$ $\alpha_{n+1}$ for $n \ge 0$
+\end{itemize}
+
+By observation, $\mid w_{0} \mid = 2^{1} - 1$ and $w_{0}$ is uneven
+
+Given $\mid w_{n} \mid = 2^{n} - 1$ and $w_{n}$ is uneven
+\begin{itemize}
+\item[•]$\mid w_{n+1} \mid = \mid w_{n+1} \mid * 2 + 1 = 2^{n+1} - 1$
+\item[•]Let w be a subword of $w_{n+1}$
+\end{itemize}
+if $\mid w \mid$ = 1, then w is uneven
+otherwise $\mid w \mid \ge 2$, then $w \in perm(w'\alpha_{n+1}^{i})$ where w' is a subword of $w_{n}$
+\begin{itemize}
+\item[•]Then par(w) = par(w') + $par(\alpha_{n+1}^{i})$
+\item[•]Then $par(w') \not= 0$ because w' is uneven
+\item[•]Then $par(w') + par(\alpha_{n+1}^{i}) \not= 0$ because $\mid w \mid_{\alpha_{n+1}} = 0$
+\item[•]Then w is uneven because $par(w) \not= 0$
+In both cases, w is uneven. Therefore $w_{n+1}$ is uneven
+
+By induction, $\mid w_{k} \mid = 2^{k} - 1$ and $w_{k}$ is uneven.
+
+\end{itemize}
 
 \end{enumerate}
 
