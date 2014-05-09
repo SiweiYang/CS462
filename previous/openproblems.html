@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<TITLE>CS 462/662:  Formal Languages and Parsing:  Open Problems</TITLE>
+</HEAD>
+<BODY>
+<P>
+<H2> CS 462/662:  Open Problems </H2>
+<P>
+
+Here is a list of open problems.  Solve any one of these, and get an
+automatic 100 for the course!
+<P>
+
+<a name="#prob1"></a>
+<H3> Problem 1</H3>
+
+A nonempty word <i>z</i> is <i>primitive</i>
+if it cannot be written in the form <i>x</i><sup><i>i</i></sup> for
+an integer <i>i</i> &ge; 2.  For example, <tt>abac</tt> is primitive,
+but <tt>abab</tt> is not, since it can be written as <tt>(ab)</tt><sup>2</sup>.
+<P>
+
+Thus a primitive word is essentially a non-power.
+<P>
+
+Let P<sub>2</sub> = { <i>x</i> &isin; {0,1}<sup>*</sup> : <i>x</i> is primitive }.
+
+It is not hard, and makes a good exercise, to prove that language
+P<sub>2</sub> is not regular.
+<P>
+
+However, the following problem is open:
+<b>Is P<sub>2</sub> context-free?</b>
+<P>
+
+Most people believe the answer is no, but no one has a proof.  The problem
+has been open for about 25 years.
+<P>
+
+By contrast, it is possible to prove that the language of non-squares
+<i>is</i> context-free.  This also makes a good exercise!
+
+<a name="#prob2"></a>
+<H3> Problem 2</H3>
+
+In Section 2.6.2 we proved a result about infinite products where the
+constant
+<i>Q</i> = &Pi;<sub><i>n</i> &ge; 1</sub> (2<i>n</i>/(2<i>n</i>+1))<sup>(-1)<sup>
+	<i>t</i><sub><i>n</i></sup></sup>
+was involved.  Here <i>t</i><sub><i>n</i></sub> is the <i>n</i>th term of the
+Thue-Morse sequence.    
+<P>
+
+<b>Can <i>Q</i> be expressed in terms of known constants?</b>
+<P>
+
+<a name="#prob3"></a>
+<H3> Problem 3</H3>
+
+Consider <b>x</b>, the lexicographically least squarefree infinite word over the
+alphabet {0, 1, 2}.    Then
+<b>x</b> begins 01020120210120102012 ... .
+<P>
+
+(a) Does every squarefree finite word appear as a subword (factor) of
+<b>x</b>?
+<P>
+
+(b) Do the letters occur with limiting frequencies in <b>x</b>, and if so,
+what are the frequencies?
+<P>
+
+<a name="#prob4"></a>
+<H3> Problem 4</H3>
+
+Describe the probability
+distribution of sizes of the minimal DFA equivalent to an
+NFA of <i>n</i> states, say over the binary alphabet.    
+<P>
+
+<a name="#prob5"></a>
+<H3> Problem 5</H3>
+
+Describe the probability distribution of sizes of the minimal DFA
+obtained by minimizing the "reversed" automaton (as discussed in class),
+over all DFA's with <i>n</i> states.  For example, can we get every
+number of states between <i>n</i> and 2<sup><i>n</i></sup>?
+<P>
+
+<a name="#prob6"></a>
+<H3> Problem 6</H3>
+
+Does every power of 16 greater than 16<sup>4</sup> 
+have a digit 1, 2, 4,  or 8
+when written in base 10?
+<P>
+
+<a name="#prob7"></a>
+<H3> Problem 7</H3>
+
+What is the state complexity of the transformation that takes a language
+L to (c(L<sup>*</sup>))<sup>*</sup>? Here by c(A) I mean the complement of
+A.  I am looking for good upper and lower bounds.  It is easy to see that
+if L has state complexity n, then (c(L<sup>*</sup>))<sup>*</sup> has
+state complexity at most 2<sup>2<sup>n</sup></sup>, but can anything close
+to this occur?  
+
+<a name="#prob8"></a>
+<H3> Problem 8</H3>
+
+Given CFL's 
+<i>L</i><sub>1</sub> and
+<i>L</i><sub>2</sub> with 
+<i>L</i><sub>1</sub> &sube;
+<i>L</i><sub>2</sub> and
+<i>L</i><sub>2</sub> - <i>L</i><sub>1</sub> infinite, is there always a CFL
+<i>L</i> such that 
+<i>L</i><sub>1</sub> &sube;
+<i>L</i> &sube;
+<i>L</i><sub>2</sub>  such that
+<i>L</i><sub>2</sub> - <i>L</i> and
+<i>L</i> - <i>L</i><sub>1</sub> 
+are both infinite?
+This is not known, even in the case where <i>L</i><sub>2</sub> = &Sigma;<sup>*</sup>.
+
+
+</BODY>
+</HTML>

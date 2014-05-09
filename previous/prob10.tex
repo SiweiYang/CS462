@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+\usepackage{float}
+%\usepackage{cyrillic}
+\usepackage{epsfig}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+\def\Enn{{\mathbb N}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 10\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, March 16 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, March 23 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]  
+Let $S$ be a subset of $\Enn^2$.
+Show that $\{a^i b^j \ : \ (i,j) \in S \}$ is context-free if and only
+if $S$ is semilinear.
+
+Is the analogous result true for $\{ a^i b^j c^k \ : \ (i,j,k) \in S \}$
+and $S \subseteq \Enn^3$?
+
+\bigskip
+
+\item{} [10 marks] 
+Consider the following grammar
+\begin{eqnarray*}
+S & \rightarrow & A C \ | \ B D \ | \ b \\
+A & \rightarrow &  B C \ | \ A S \ | \ a \\
+B & \rightarrow &  D A \ | \  c \\
+C & \rightarrow &  B B \ | \ a \\
+D & \rightarrow &  C A \ | \ a
+\end{eqnarray*}
+
+Determine if $aaabcc \in L(G)$ using the CYK algorithm, and
+if it is, give a parse tree.  Show your work.
+%06
+
+\bigskip
+
+\item{} [10 marks]  
+Suppose $L$ is a CFL that is inherently ambiguous.  Then by the definition,
+for every
+context-free grammar $G$ with $L = L(G)$, at least one word in $L$ has at
+least two different parse trees in $G$.
+Show that in fact {\it infinitely}
+many words in $L$ must have at least two different parse trees.
+
+\end{enumerate}
+
+\end{document}

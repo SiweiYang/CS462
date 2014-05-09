@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+%\usepackage{cyrillic}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 6\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, February 9 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, February 16 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]
+Is the Myhill-Nerode equivalence relation induced by a language
+$L$ the same as the one induced by $\overline{L}$, the complement of $L$?  
+Explain.
+
+\item{} [10 marks] 
+Consider the following transformation on languages:
+$$ {\tt sqrt} (L) = \lbrace x \in \Sigma^* \ : \ \text{ there exists }
+y \in \Sigma^* \text{ such that } |y| = |x|^2 \text{ and } xy \in L
+\rbrace.$$
+
+Show that if $L$ is regular, then so is ${\tt sqrt}(L)$.  Hint:  use
+the boolean matrix approach.
+
+\item{} [10 marks]
+Show that if $L$ is a regular language, then so is
+$${\tt ROOT}(L) = \lbrace w \ : w^{|w|} \in L \rbrace.$$
+Hint:  use the transformation automaton.
+
+\end{enumerate}
+
+\end{document}

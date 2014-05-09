@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+%\usepackage{cyrillic}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 4\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, January 26 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, February 2 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]
+Which of the following assertions
+are true for all languages $L_1, L_2$?
+\begin{itemize}
+\item[(a)] $(L_1/L_2)L_2 \subseteq L_1$;
+
+\item[(b)] $L_1\subseteq (L_1/L_2)L_2$.
+\end{itemize}
+
+\item{} [10 marks]
+Let $L_1, L_2 \subseteq \Sigma^*$ be languages.  In class we defined the
+(right) quotient $L_1/L_2$.  But there is also a (left)
+quotient defined by
+$$L_1 \backslash L_2 = \lbrace x \in \Sigma^* \ : \ 
+	\text{ there exists } y \in L_2 \text{ such that }
+		yx \in L_1 \rbrace .$$
+Prove or disprove: if $L_1$ is regular, and $L_2$ is any language,
+then $L_1 \backslash L_2$ is regular.
+
+\item{} [10 marks]
+Consider the shuffle operation
+{\rm shuff} as defined in Example 3.3.8, page 57.
+If ${\rm shuff}(L, \lbrace 0 \rbrace)$ is regular, need $L$ be regular?
+
+\end{enumerate}
+
+\end{document}

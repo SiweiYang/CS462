@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+\usepackage{float}
+%\usepackage{cyrillic}
+\usepackage{epsfig}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 7\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, February 16 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, March 2 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]
+Consider the following DFA.  Using any algorithm, find the minimal
+equivalent DFA.  Show all your steps.
+
+\begin{figure}[H]
+\begin{center}
+\input sol21.pstex_t
+\end{center}
+\vskip -.2in
+\protect\label{diagram12}
+\end{figure}
+
+\item{} [10 marks] 
+Let $L$ be the language that contains the base-$10$ representations
+of the non-negative integers which are not squares (of integers).
+Thus
+$$L = \lbrace {\tt 2,3,5,6,7,8,10,11,12,13,14,15,} \ldots \rbrace .$$
+Find the minimal elements (for the subsequence order) for $L$.
+Use this to give an expression for $\sup(L)$.
+
+
+\item{} [20 marks] 
+
+(a)  [10 marks]
+
+Let $n$ be an integer $\geq 1$, and
+let $F_n \subseteq \lbrace {\tt 0,1,2,3,4} \rbrace^*$ be defined as follows:
+$$F_n = \lbrace {\tt 3} \ {\tt 0}^{i_1} \ {\tt 1} \ {\tt 0}^{i_2} \ {\tt 1}
+\ \cdots {\tt 1} \ {\tt 0}^{i_n} \
+{\tt 2}^k \ {\tt 0}^{i_k} \ {\tt 4}  \ : \ 1 \leq k \leq n, \ 1 \leq i_j \leq n
+\rbrace .$$
+For example,
+\begin{eqnarray*}
+F_2 &=& \lbrace {\tt 3010204, 30102204, 300102004, 300102204,}  \\
+    && {\tt 30100204, 3010022004, 3001002004, 30010022004} \rbrace.
+	\end{eqnarray*}
+
+Show that $F_n$ can be accepted by
+a 2DFA using $O(n)$ states.
+Please provide a detailed description of
+your 2DFA, explaining exactly what it does, but it is not necessary to
+draw a complete transition diagram.
+
+\bigskip
+
+(b) [10 marks]
+
+Using the Myhill-Nerode theorem, show that any DFA for the language
+$F_n$ defined in part (a) has
+$n^n$ states.
+
+
+\end{enumerate}
+
+\end{document}

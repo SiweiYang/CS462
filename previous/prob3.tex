@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 3\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, January 19 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, January 26 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]
+What is the largest power of a word
+that you can find in the decimal expansion of $\pi$?  Use a search
+engine to locate digits of $\pi$ and any method to search for powers,
+give the power, its location in $\pi$, and the URL you used.
+Note:  I was able to find a $9$th power without any programming at
+all, and just 5 minutes with a search engine.  Can you do better?
+
+
+\item{} [10 marks]
+A word $w$ is a {\it conjugate} of a word $x$ if $w$ can be obtained
+from $x$ by cyclically shifting the letters.  For example,
+{\tt enlist} is a conjugate of {\tt listen}.
+
+(a) [7 marks] Let $y, z$ be palindromes.  Show that if at least
+one of $|y|, |z|$ is even, then some conjugate of $yz$ is a palindrome.
+
+(b) [3 marks] Give an example to show that
+if both $|y|$ and $|z|$ are odd, then it is possible to have no
+conjugate of $yz$ be a palindrome.
+
+\item{} [10 marks]   Prove the following improvement on Theorem~2.3.6
+in the course text.  You can use the same idea as in the proof of
+that theorem.
+
+Let $x$ and $y$ be nonempty words.
+
+Show that 
+$x^\alpha = y^\beta$ 
+for some fractional exponents $\alpha, \beta$ satisfying
+$\alpha + \beta \leq \alpha \beta$ iff 
+$xy = yx$.
+
+
+\end{enumerate}
+
+\end{document}

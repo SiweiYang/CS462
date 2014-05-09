@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+<TITLE>CS 462/662:  Formal Languages and Parsing:  Lecture Summaries 2011 </TITLE>
+</HEAD>
+<BODY>
+<P>
+<H2> Lecture Summaries -- Winter 2011</H2>
+<P>
+
+<H3> Week 1</H3>
+
+Lecture 1:  Wednesday, January 5, 2011: <BR>
+I handed out the <A HREF="info.pdf">Course information sheet</A>.
+<a href="prob1.pdf">Problem Set 1</a> is available and due January 12.
+Slide: <A HREF="fl.ps">formal languages and connections to other areas</A>.
+We went over the basic definitions of concepts such as word (string),
+language, reversal, power, palindrome, empty string, prefix, suffix, subword,
+etc.  (pages 1-4 of the course textbook).  We also went over the definitions
+in Sections 2.1 and 2.2.  We proved the first theorem of
+Lyndon-Sch&uuml;tzenberger (Theorem 2.3.2).
+<P>
+
+<H3> Week 2</H3>
+
+Lecture 2:  Monday, January 10, 2011:<BR>
+Second theorem of Lyndon-Sch&uuml;tzenberger (Theorem 2.3.3).
+Primitive words.  Theorem 2.3.4.
+Introduction to a version of the Fine-Wilf theorem (Theorem 2.3.5).
+<a href="openproblems.html#prob1">Open problem #1:</a>  is the set of primitive words over
+{0, 1} context-free?
+<P>
+
+Lecture 3:  Wednesday, January 12, 2011:<BR>
+<a href="prob2.pdf">Problem Set 2</a> is available and due January 19.
+Proof of Theorem 2.3.5.  Theorem 2.3.6.
+Definitions of conjugates and bordered words.  
+Theorems 2.4.2 and 2.4.3.
+<P>
+
+<H3>Week 3</H3>
+
+Lecture 4:  Monday, January 17, 2011:<BR>
+Thm. 2.4.5.  The
+definition of square, overlap, etc., and
+the Thue-Morse sequence.  Introduction to applications of the Thue-Morse
+sequence:  chess, music, etc.  For more 
+about the work of Per N&oslash;rg&aring;rd,
+see <a href="norgard.html">here</a>.
+<P>
+
+Lecture 5:  Wednesday, January 19, 2011:
+<BR>
+Theorems 2.5.1 and 2.5.2, and the rest of the material in section 2.6.
+<a href="prob3.pdf">Problem Set 3</a> is
+available and due January 26.   We mentioned
+two open problems:  <a href="openproblems.html#prob2">Problem 2</a> and
+<a href="openproblems.html#prob3">Problem 3</a>.
+<P>
+
+For more about the Thue-Morse sequence, see <a href="http://www.cs.uwaterloo.ca/~shallit/Papers/ubiq.ps">this survey paper</a>.
+<P>
+
+<H3>Week 4</H3>
+
+Lecture 6:  Monday, January 24, 2011:<BR>
+Languages.  Definition of union, concatenation, star, reverse, etc.
+Regular languages.  Review of what we know about them.
+Outline of what we will be doing over the next 6 lectures.
+Quotient:  definition, examples.  Proof of Theorem 3.2.3.
+Morphisms.  Substitutions.  Examples.  Proof of Theorem 3.3.5.
+Definition of inverse morphism.
+<P>
+
+Lecture 7:  Wednesday, January 26 2011:<BR>
+<a href="prob4.pdf">Problem Set 4</a> is now available.
+<P>
+
+We continued our discussion of inverse morphism.  We showed how to
+represent shuffle using morphisms and inverse morphisms (Example 3.3.8),
+and proved Theorem 3.3.9.  We covered the material in section 3.4.  
+We discussed automata with output (section 3.1),
+and began section 3.5.
+<P>
+
+<H3>Week 5</H3>
+
+Lecture 8:  Monday, January 31, 2011:<BR>
+Transducers.  Example: transducer for expressing base-3 numbers as
+sums of 2 Cantor numbers.  Nivat's theorem.     Example:  removing
+leading zeroes.  Introduction to 2DFA's.
+<P>
+
+Lecture 9:  Wednesday, February 2 2011:<BR>
+<a href="prob5.pdf">Problem Set 5</a> is now available.  Don't forget,
+solutions to the problem sets are available on the course home page.
+<P>
+2DFA's:  formal definition.  Examples.  Proof that 2DFA's accept
+the same class of languages as the DFA's.  Example of the conversion.
+The transformation automaton.  Theorem 3.7.2, Corollary 3.7.3,
+Example 3.7.5.
+<P>
+Automata and Boolean matrices.  Introduction to the Myhill-Nerode
+theorem.
+<P>
+
+Lecture 11:  Wednesday, February 9 2011:<BR>
+More on the Myhill-Nerode theorem.  Proof.  Examples.  Application to
+NFA to DFA conversion.  Introduction to DFA minimization.
+<P>
+
+
+<H3>Week 7</H3>
+
+Lecture 12:  Monday, February 14, 2011:<BR>
+<a href="prob7.pdf">Problem Set 7</a> is now available.
+<P>
+
+We proved that the minimization algorithm works.  Applications:  shortest
+string distinguishing two automata.  Brzozowski's algorithm (introduction).
+<P>
+
+Lecture 13:  Wednesday, February 16, 2011:<BR>
+<a href="sol6.pdf">Solutions to Problem Set 6</a> now available.
+<P>
+
+We proved that Brzozowski's algorithm works.  Example of Brzozowski's
+algorithm.  The operations sup() and sub().  Minimal elements.  Proof that
+sub(L) and sup(L) are always regular.
+<P>
+
+You may want to read <a href="http://www.cs.uwaterloo.ca/~shallit/Papers/minimal5.ps">this paper</a> which gives the proof that minimal elements
+of the prime numbers (expressed in base 10) are as described on the cards
+I handed out.  It also gives an idea of how to approach the problem on the
+problem set (but the one on the problem set is much easier).
+<P>
+
+New office hour added:  Tuesday, 9 - 10 AM.  No office hours next
+week (reading week).  Send me e-mail instead.
+<P>
+
+<H3>Week 8</H3>
+<P>
+
+Lecture 14:  Monday, February 28, 2011:  We looked at state
+complexity, proved the state complexity of intersection, and
+nondeterministic state complexity.  I mentioned an 
+<a href="openproblems.html#prob7">open problem</a>:
+the state complexity of (c(L<sup>*</sup>))<sup>*</sup>. 
+Here by c(A) I mean the complement of A. 
+<P>
+
+Lecture 15:  Wednesday, March 2 2011:  
+<a href="prob8.pdf">Problem Set 8</a> is available.
+<P>
+
+Introduction to context-free languages.  Closure under morphism (easy);
+inverse morphism (harder).   Every unary-context-free language is
+regular.  Intro to Ogden's lemma.  (You can use Theorem 4.1.6 in 
+Problem set 8 even though we didn't do it yet.)
+<P>
+
+<H3>Week 9</H3>
+<P>
+
+Lecture 16:  Monday, March 7 2011:  Ogden's lemma.  Review of the ordinary
+pumping lemma.  Proof of Ogden's lemma.  Example of how to apply it
+(the <i>n</i>! trick).    Application:  inherently ambiguous languages.
+<P>
+
+Lecture 17:  Wednesday, March 9 2011:  Parikh's theorem.
+<A href="prob9.pdf">Problem Set 9 is available</a>; due March 16.
+<P>
+
+Prof. Shallit will be unable to hold regularly-scheduled office hours
+on Thursday, March 10.
+<P>
+
+<H3>Week 10</H3>
+<P>
+
+Lecture 18:  Monday, March 14 2011:  Proof of non-closure of CFL's under
+quotient.  Deterministic context-free languages.  Closure of class of
+DCFL's under complement.  DCFL's and Myhill-Nerode classes.  Introduction
+to recognition and parsing algorithms.
+<P>
+
+Lecture 19:  Wednesday, March 16 2011:  The CYK algorithm.  Using the CYK
+algorithm to generate a parse tree.  Introduction to LR parsing. The
+Knuth automaton.
+<P>
+
+Open problem:  given CFL's 
+<i>L</i><sub>1</sub> and
+<i>L</i><sub>2</sub> with 
+<i>L</i><sub>1</sub> &sube;
+<i>L</i><sub>2</sub> and
+<i>L</i><sub>2</sub> - <i>L</i><sub>1</sub> infinite, is there always a CFL
+<i>L</i> such that 
+<i>L</i><sub>1</sub> &sube;
+<i>L</i> &sube;
+<i>L</i><sub>2</sub>  such that
+<i>L</i><sub>2</sub> - <i>L</i> and
+<i>L</i> - <i>L</i><sub>1</sub> 
+are both infinite?
+This is not known, even in the case where <i>L</i><sub>2</sub> = &Sigma;<sup>*</sup>.
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+\usepackage{float}
+%\usepackage{cyrillic}
+\usepackage{epsfig}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 9\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, March 9 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, March 16 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]  Let $\psi$ be the Parikh map.  Let
+$$L = \lbrace w \in \lbrace 0, 1, 2 \rbrace^* \ : \ 
+|w|_0 = |w|_1 = |w|_2  \rbrace.$$   
+Express $\psi(\overline{L})$ as a finite union
+of linear sets.  Here $\overline{L}$ is the complement of $L$.
+
+\bigskip
+
+\item{} [10 marks] Is
+$$
+L = \lbrace 0^i 1^j 2^k \mid i \not=j {\rm\ and\ } j \not= k \rbrace
+$$
+context-free? (\emph{Hint}: Use Ogden's lemma.)
+
+\bigskip
+
+\item{} [10 marks]  Prove or disprove: if $L$ is a CFL, then so is 
+$\lbrace x \ : x^* \subseteq L \rbrace$.
+
+
+
+\end{enumerate}
+
+\end{document}

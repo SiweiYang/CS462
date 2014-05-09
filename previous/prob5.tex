@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{fullpage,amssymb,amsmath}
+%\usepackage{cyrillic}
+\def\sub{{\rm sub}}
+\def\pref{{\rm pref}}
+\def\suff{{\rm suff}}
+\def\shuff{{\rm shuff}}
+
+\thispagestyle{empty}
+
+\begin{document}
+\begin{center}
+\large\bf University of Waterloo\\
+CS~462 --- Formal Languages and Parsing\\
+Winter 2011\\
+Problem Set 5\\
+\end{center}
+
+\bigskip
+
+\noindent{\it Distributed Wednesday, February 2 2011.}
+
+\smallskip
+
+\noindent{\it Due Wednesday, February 9 2011, in class.}
+
+\bigskip\bigskip
+
+All answers should be accompanied by proofs.
+
+\begin{enumerate}
+
+\item{} [10 marks]
+Suppose $L \subseteq \Sigma^*$ is a regular language.  Show that
+$$2L := \lbrace a_1 a_1 a_2 a_2 \cdots a_k a_k \ : \ 
+\text{each $a_i \in \Sigma$ and $a_1 a_2 \cdots a_k \in L$} \rbrace$$
+is regular.
+
+\item{} [10 marks] Let $h: \Sigma^* \rightarrow \Sigma^*$ be a morphism,
+and let $L \subset \Sigma^*$ be a language.  Define
+$$h^{-*} (L) = \bigcup_{i \geq 0} h^{-i} (L),$$
+where by $h^{-i}(L)$ we mean $\overbrace{h^{-1} ( h^{-1} ( \cdots h^{-1}}^{i
+ \text{ times}} (L)))$.
+Show that if $L$ is regular, so is $h^{-*} (L)$.
+
+\item{} [10 marks]
+\begin{itemize}
+\item[(a)]  [2 marks -- the easy part]
+Let $h: \lbrace a,b \rbrace^* \rightarrow \lbrace 0 \rbrace^*$
+be the morphism defined by $h(a) = h(b) = 0$.
+Let $L \subseteq \lbrace a,b \rbrace^*$ be a language.
+If $h(L)$ is regular, need
+$L$ be regular?  
+
+\item[(b)]  [8 marks -- the harder part] Now let $\Sigma = \lbrace a,b, c \rbrace$.
+Let $h_{a,b}: \Sigma^* \rightarrow (\Sigma \cup \lbrace 0 \rbrace)^*$ be the morphism
+defined by $h(a) = h(b) = 0$ and $h(c) = c$.  
+Thus $h_{a,b}$ maps both $a$ and $b$ to $0$ and leaves the remaining letter,
+$c$, unchanged.  In a similar way define
+$h_{a,c}$ and $h_{b,c}$.  
+\medskip
+
+Now let $L \subseteq \Sigma^* $ be a language, and define
+$A := h_{b,c}(L)$, $B := h_{a,c}(L)$, and $C := h_{a, b}(L)$.
+If $A$, $B$, and $C$ are all regular, need $L$ be regular?
+
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
